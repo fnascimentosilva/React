@@ -2,6 +2,7 @@
 import './App.css'
 import Counter from './components/Counter'
 import Descricao from './components/Descricao'
+import Events from './components/Events'
 import Pai from './components/Pai'
 import RevisaoUseState from './components/RevisaoUseState'
 import UserInfoForm from './components/UserInfoForm'
@@ -19,6 +20,7 @@ function App() {
       <Counter/>
       <UserInfoForm/>
       <RevisaoUseState/>
+      <Events/>
     </>
   )
 }
