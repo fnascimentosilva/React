@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+//Aplicando o useState
 function Counter(){
     const [count, setCount] = useState(1);
     return(
