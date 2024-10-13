@@ -3,6 +3,7 @@ import './App.css'
 import Counter from './components/Counter'
 import Descricao from './components/Descricao'
 import Events from './components/Events'
+import Greetings from './components/Greetings'
 import Lists from './components/Lists'
 import Pai from './components/Pai'
 import RevisaoUseState from './components/RevisaoUseState'
@@ -23,6 +24,7 @@ function App() {
       <RevisaoUseState/>
       <Events/>
       <Lists numbers={[1,2,3,4,5]}/>
+      <Greetings /* name = "Fabrício" *//>
     </>
   )
 }
