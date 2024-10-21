@@ -2,6 +2,7 @@
 import './App.css'
 import Timer from './components/Timer'
 import Context from './components/useContext'
+import Contador from './components/UseReducer'
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
       <Timer />
       {/* useContext */}
       <Context />
+      {/* UseReducer */}
+      <Contador/>
     </>
   )
 }
