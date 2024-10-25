@@ -1,4 +1,4 @@
-import {useEffect, useMemo } from "react";
+import {useEffect, useMemo, useState } from "react";
 
 /* Exercicio 1: Uso de useEffect para sincronização de dados
 Enunciado: Você precisa exibir informações de um usuário que são recebidas via props de um componente.
@@ -48,6 +48,38 @@ function FibCalculator ({num}) {
     
 }
 
+function useOnlineStatus(){
+    const [isOnLine, setIsOnLine] = useState(navigator.onLine);
+
+    useEffect(() => {
+
+        const handleOnLine = () => setIsOnLine(true);
+        const handleOffLine = () => setIsOnLine(false);
+
+        window.addEventListener('online', handleOnLine);
+        window.addEventListener('offline', handleOffLine);
+
+        //limpeza do evento
+
+        return () => {
+            window.removeEventListener('online', handleOnLine);
+            window.removeEventListener('offline', handleOffLine);
+        }
+    }, []);
+
+    return isOnLine;
+}
+
+function OnLineStatusIndicator(){
+    const isOnLine = useOnlineStatus();
+
+    return (
+        <div>
+            <p>Voce está {isOnLine ? 'online': 'offline'}</p>
+        </div>
+    )
+}
+
 function Exercises() {
 
     const userInfo = {name: "Fabrício", jobTitle: "Programador"};
@@ -55,9 +87,12 @@ function Exercises() {
 
     return (
         <div>
-            <h1>Exercício 1</h1>
+            <h2>Exercício 1</h2>
             <ExibirDadosUser Info = {userInfo} />
+            <h2>Exercício 2</h2>
             <FibCalculator num = {num}/>
+            <h2>Exercício 3</h2>
+            <OnLineStatusIndicator/>
         </div>
     )
 }
