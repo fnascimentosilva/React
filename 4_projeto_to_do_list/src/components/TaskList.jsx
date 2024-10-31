@@ -2,11 +2,11 @@ import Task from "./Task"
 
 function TaskList() {
   return (
-    <ul>
-        <Task/>
-        <Task/>
-        <Task/>
-    </ul>
+   <ul>
+    <Task/>
+    <Task/>
+    <Task/>
+   </ul>
   )
 }
 

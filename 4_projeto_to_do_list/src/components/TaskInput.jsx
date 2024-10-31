@@ -1,10 +1,10 @@
 
 function TaskInput() {
   return (
-    <form >
-        <input type="text"  placeholder="Adicione aqui a atividade"/>
-        <button type="submit">adicionar</button>
-    </form>
+   <form >
+    <input type="text" placeholder="Adicione uma nova tarefa"/>
+    <button type="submit">Adicionar</button>
+   </form>
   )
 }
 

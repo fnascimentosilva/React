@@ -1,11 +1,11 @@
 
 function Task() {
   return (
-    <li>
-        <span>Texto da tarefa</span>
-        <button>remover</button>
-    </li>
     
+    <li>
+      <p>Atividade a ser feita</p>
+      <button>Remover</button>
+    </li>
   )
 }
 
