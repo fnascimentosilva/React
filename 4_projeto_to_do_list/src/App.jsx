@@ -15,11 +15,15 @@ function App() {
     setTasks([...tasks, {id:Date.now(), text: task, done: false}]);
   }
 
+  function deleteTask(taskId) {
+    setTasks (tasks.filter((task) => task.id !== taskId));
+  }
+
   return (
     <>
       <h1>Lista de tarefas</h1>
       <TaskInput onAddTask = {addTask}/>
-      <TaskList tasks = {tasks}/>
+      <TaskList tasks = {tasks} onDeleteTask = {deleteTask}/>
       
     </>
   )
