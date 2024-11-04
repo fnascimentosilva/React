@@ -3,7 +3,7 @@ function Task() {
   return (
     
     <li>
-      <p>Atividade a ser feita</p>
+      <span>Atividade a ser feita</span>
       <button>Remover</button>
     </li>
   )
