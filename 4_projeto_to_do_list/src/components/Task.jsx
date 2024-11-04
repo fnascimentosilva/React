@@ -1,9 +1,9 @@
 
-function Task({task, onDelete}) {
+function Task({task, onDelete, onToggleDone}) {
   return (
     
     <li>
-      <span>{task.text}</span>
+      <span onClick={onToggleDone} style={{textDecoration: task.done ? "line-through" : "none"}}>{task.text}</span>
       <button onClick={onDelete}>Remover</button>
     </li>
   )
