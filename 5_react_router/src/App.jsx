@@ -10,12 +10,19 @@ function App() {
   return (
     <>
       
-      {/* Setup e configuracao inicial */ }
+      {/*1 - Setup e configuracao inicial */ }
       <nav>
         <ul>
           <li><Link to="/">Inicio</Link></li>
           <li><Link to="/about">Sobre</Link></li>
           <li><Link to="/contact">Contato</Link></li>
+
+          {/*2 - Navilink */}
+
+          <li>
+            {/* Pode ser utilizado link ou navlink */}
+            <NavLink className={({isActive}) => (isActive ? "active-link" : "")} to="/contact">Contato</NavLink>
+          </li>
         </ul>
       </nav>
       <Routes>
