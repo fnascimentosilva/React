@@ -7,19 +7,19 @@ function Login() {
 
     const navigate = useNavigate();
 
-    function handleLogin(event){
+    function handleLogin(event) {
         event.preventDefault();
 
         console.log(`O usuário ${username} está logado`);
-
-       navigate("/");
+        //Endereco pra onde será direcionado o usuario
+        navigate("/");
     }
-  return (
-    <form onSubmit={handleLogin}>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
-        <button type="submit">Entrar</button>
-    </form>
-  )
+    return (
+        <form onSubmit={handleLogin}>
+            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <button type="submit">Entrar</button>
+        </form>
+    )
 }
 
 export default Login
