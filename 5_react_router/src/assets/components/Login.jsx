@@ -12,7 +12,7 @@ function Login() {
 
         console.log(`O usuário ${username} está logado`);
 
-       
+       navigate("/");
     }
   return (
     <form onSubmit={handleLogin}>
