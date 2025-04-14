@@ -8,6 +8,7 @@ import Dashboard from './assets/components/Dashboard'
 import Profile from './assets/components/Profile'
 import Settings from './assets/components/Settings'
 import TaskDetails from './assets/components/TaskDetails'
+import NotFound from './assets/components/NotFound'
 
 function App() {
 
@@ -43,7 +44,7 @@ function App() {
 
         {/* 404 página nao encontrada */}
         <div>
-          <Link to={'/itens/1'}>Irem 1</Link>
+          <Link to={'/itens/1'}>Item 1</Link>
         </div>
       </nav>
       <Routes>
@@ -63,6 +64,10 @@ function App() {
 
         {/*5 - Rotas dinamicas */}
         <Route path='/tasks/:taskId' element={<TaskDetails/>}/>
+
+        {/* 404 página nao encontrada */}
+
+        <Route path='*' element = {<NotFound/>}/>
       </Routes>
 
       <p>Rodapé</p>
