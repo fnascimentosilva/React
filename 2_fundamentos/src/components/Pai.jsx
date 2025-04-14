@@ -1,7 +1,14 @@
+import FilhoFuncao from "./FilhoFuncao";
+
 function Pai() {
 
+    function cliqueFilho(){
+        console.log('Clicou no filho');
+        
+    }
+    
     return (
-        <p>Teste</p>
+        <FilhoFuncao clicou = {cliqueFilho}></FilhoFuncao>
     )
 }
 
