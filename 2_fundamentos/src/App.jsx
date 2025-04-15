@@ -6,6 +6,7 @@ import Events from './components/Events'
 import Exercises from './components/Exercises'
 import Greetings from './components/Exercises'
 import Lists from './components/Lists'
+import LoginButton from './components/LoginButton'
 import Pai from './components/Pai'
 import RevisaoUseState from './components/RevisaoUseState'
 import UserInfoForm from './components/UserInfoForm'
@@ -26,6 +27,7 @@ function App() {
       <Events/>
       <Lists numbers={[1,2,3,4,5]}/>
       <Exercises/>
+      <LoginButton login = {true}></LoginButton>
     </>
   )
 }
